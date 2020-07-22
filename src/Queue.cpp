@@ -7,7 +7,8 @@ template<typename T> Queue<T>::Queue() {
   printer = NULL;                                 // set the printer of queue to point nowhere.
   contents = (T*)malloc(sizeof(T) * initialSize); // allocate enough memory for the array.
   if (contents == NULL)                           // if there is a memory allocation error.
-    error("QUEUE: insufficient memory to initialize queue.");
+    //error("QUEUE: insufficient memory to initialize queue.");
+    return;
   size = initialSize;                             // set the initial size of the queue.
 }
 
@@ -25,10 +26,12 @@ template<typename T> Queue<T>::~Queue() {
 /// Resize the size of the queue.
 template<typename T> void Queue<T>::resize(const int s) {
   if (s <= 0)                               // defensive issue.
-    error("QUEUE: error due to undesirable size for queue size.");
+    return;
+    //error("QUEUE: error due to undesirable size for queue size.");
   T* temp = (T*)malloc(sizeof(T) * s);      // allocate enough memory for the temporary array.
   if (temp == NULL)                         // if there is a memory allocation error.
-    error("QUEUE: insufficient memory to initialize temporary queue.");
+    return
+    //error("QUEUE: insufficient memory to initialize temporary queue.");
   for (uint16_t i = 0; i < items; i++)      // copy the items from the old queue to the new one.
     temp[i] = contents[(head + i) % size];
   free(contents);                           // deallocate the old array of the queue.
@@ -80,11 +83,11 @@ template<typename T> int Queue<T>::count() const {
 }
 
 /// Set the printer of the queue.
-template<typename T> void Queue<T>::setPrinter(Print& p) {
+/*template<typename T> void Queue<T>::setPrinter(Print& p) {
   printer = &p;
-}
+}*/
 
 /// Exit report method in case of error.
-template<typename T> void Queue<T>::error(const char* m) const {
+/*template<typename T> void Queue<T>::error(const char* m) const {
   if (printer) printer->println(m);
-}
+}*/
