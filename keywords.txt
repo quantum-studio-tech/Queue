@@ -5,14 +5,13 @@
 #######################################
 # Datatypes (KEYWORD1)
 #######################################
-Queue	KEYWORD1
+Queue     KEYWORD1
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
-push		KEYWORD2
-pop			KEYWORD2
-peek		KEYWORD2
-isEmpty		KEYWORD2
-isFull		KEYWORD2
-count		KEYWORD2
-setPrinter	KEYWORD2
+push      KEYWORD2
+pop       KEYWORD2
+peek      KEYWORD2
+isEmpty   KEYWORD2
+isFull    KEYWORD2
+count     KEYWORD2
