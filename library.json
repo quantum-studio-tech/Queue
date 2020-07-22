@@ -1,10 +1,10 @@
 {
     "name": "Queue",
-    "description": "Realization of FIFO queries.",
+    "description": "Realization of FIFO queries for Arduino based platforms.",
     "keywords": "array, queue",
     "authors": [
         {
-            "name": "Quantum Studio uDev.",
+            "name": "Quantum Studio Technologies Inc.",
             "email": "alex.mytko@gmail.com",
             "url": "http://www.quantum.com.ua",
             "maintainer": true
@@ -12,10 +12,10 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/PaulStoffregen/OneWire"
+        "url": "https://github.com/quantum-studio-tech/Queue"
     },
     "version": "1.0.0",
-    "homepage": "https://www.pjrc.com/teensy/td_libs_OneWire.html",
+    "homepage": "https://github.com/quantum-studio-tech/Queue",
     "frameworks": "Arduino",
     "examples": [
         "examples/*/*.ino"
